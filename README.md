@@ -1,8 +1,8 @@
 # Sharpen Skill
 
-Sharpen Skill helps refine a local Codex skill from evidence in your conversation. It compares a skill's current instructions with your requests, corrections, and repeated workflow choices, then proposes a focused change to the relevant `SKILL.md`.
+Sharpen Skill helps refine a local skill from evidence in your conversation. It compares a skill's current instructions with your requests, corrections, and repeated workflow choices, then proposes a focused change to the relevant `SKILL.md`.
 
-It can spot differences within one skill, such as a preference to use one commit for a small cohesive change and multiple commits when work spans several modules. It can also spot a handoff between skills, such as routinely using `grill-me` after brainstorming and before writing a spec.
+It can spot differences within one skill. It can also spot a handoff between skills.
 
 The skill shows the proposed wording and asks whether to apply it. If you have already explicitly requested the edit, it makes the change and validates the skill. It does not treat an unchallenged output or a single example as a permanent preference.
 
