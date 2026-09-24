@@ -1,10 +1,11 @@
 # Sharpen Skill
 
-Sharpen Skill helps refine a local skill from evidence in your conversation. It compares a skill's current instructions with your requests, corrections, and repeated workflow choices, then proposes a focused change to the relevant `SKILL.md`.
+Sharpen Skill reviews and improves an existing `SKILL.md` in two ways:
 
-It can spot differences within one skill. It can also spot a handoff between skills.
+- **Engineering review:** Check whether the description triggers the right requests, instructions have clear scope and completion criteria, and the file avoids conflicting or duplicated guidance.
+- **Usage review:** Compare instructions with your requests, corrections, repeated choices, and handoffs between skills.
 
-The skill shows the proposed wording and asks whether to apply it. If you have already explicitly requested the edit, it makes the change and validates the skill. It does not treat an unchallenged output or a single example as a permanent preference.
+It proposes a focused change with the target file, wording, and reason. It asks before applying the proposal unless you already requested the edit. It does not treat silence or a single example as a permanent preference.
 
 ## Install
 
@@ -14,8 +15,6 @@ npx skills add Lilb1tty/sharpen-skill
 
 ## Use
 
-After using another skill, invoke `$sharpen-skill` and describe the behavior you preferred or corrected. For example:
+Invoke `$sharpen-skill` with the skill you want reviewed. Ask for an engineering review, describe a recurring difference between the skill and your workflow, or request both.
 
-> `$sharpen-skill` — I usually run `grill-me` after brainstorming and before writing the spec. Suggest how to reflect that in the brainstorming skill.
-
-The skill needs access to the relevant conversation and local skill files. If earlier context is unavailable, provide the request, output, or correction you want it to compare.
+An engineering review can use the skill files alone. For a usage review, provide relevant requests, outputs, or corrections if the earlier conversation is unavailable.
